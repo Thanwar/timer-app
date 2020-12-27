@@ -19,7 +19,7 @@ describe('App renders', () => {
 describe('mounted Timer', () => {
 	let container:any;
   
-	beforeEach(() => (container = mount(<Timer />)));
+	beforeEach(() => (container = shallow(<Timer />)));
   
 	it('invokes startTimer when the start button is clicked', () => {
 	  const spy = jest.spyOn(container.instance(), 'startTimer');
