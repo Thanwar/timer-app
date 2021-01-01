@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import './TimerButton.css';
 
 
-const TimerButton = (props: any) => (
-  <div className="button-container" />
+const TimerButton = ( props: any ) => (
+<div className="button-container" onClick={() => props.buttonAction()}>
+    <p className="button-value">{props.buttonValue}</p>
+  </div>
 );
 
 TimerButton.propTypes = {
