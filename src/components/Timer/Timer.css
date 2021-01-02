@@ -4,6 +4,8 @@
 	height: var(--timer-height);
 	width: var(--timer-width);
 	text-align: center;
+	/* background-color: blue; */
+	margin: 0 auto;
 }
 
 .timer-button-container
@@ -17,6 +19,18 @@
 
 .time-display
 {
-	background-color: aqua;
+	/* background-color: aqua; */
 	padding: 50px;
+	font-size: 100px;
+}
+
+@media screen and (max-width: 700px) {
+
+	.time-display
+{
+	/* background-color: red; */
+	padding: 90px;
+	font-size: 50px;
+}
+
 }

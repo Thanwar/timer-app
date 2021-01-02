@@ -6,36 +6,79 @@ class Timer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      minutes: 25,
+      minutes: 0,
       seconds: 0,
       isOn: false,
     };
+
+    this.startTimer = this.startTimer.bind(this);
+    this.stopTimer = this.stopTimer.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
   }
 
   startTimer() {
-    console.log("Starting timer.");
+    if (this.state.isOn === true) {
+      return;
+    }
+    this.myInterval = setInterval(() => {
+      const { seconds, minutes } = this.state;
+
+      // if (seconds === 0) {
+        this.setState(({ seconds }) => ({
+          seconds: seconds + 1,
+        }));
+      // }
+      if (seconds === 59) {
+        if (minutes === 59) {
+          clearInterval(this.myInterval);
+        } else {
+          this.setState(({ minutes }) => ({
+            minutes: minutes + 1,
+            seconds: 0,
+          }));
+        }
+      }
+    }, 1000);
+    this.setState({ isOn: true });
   }
 
   stopTimer() {
-    console.log("Stopping timer.");
+    clearInterval(this.myInterval);
+    this.setState({ isOn: false });
   }
 
   resetTimer() {
-    console.log("Resetting timer.");
+    this.stopTimer();
+    this.setState({
+      minutes: 0,
+      seconds: 0,
+    });
   }
 
   render = () => {
+    const { minutes, seconds } = this.state;
+
     return (
       <div className="timer-container">
         <div className="time-display">
-          <h1>00:00</h1>
+          {minutes < 10 ? `0${minutes}` : minutes }:{seconds < 10 ? `0${seconds}` : seconds}
         </div>
         <div className="timer-button-container">
-          <TimerButton buttonAction={this.startTimer} buttonValue={"Start"} />
-
-          <TimerButton buttonAction={this.stopTimer} buttonValue={"Stop"} />
-
-          <TimerButton buttonAction={this.resetTimer} buttonValue={"Reset"} />
+          <TimerButton
+            className="start-timer"
+            buttonAction={this.startTimer}
+            buttonValue={'Start'}
+          />
+          <TimerButton
+            className="stop-timer"
+            buttonAction={this.stopTimer}
+            buttonValue={'Stop'}
+          />
+          <TimerButton
+            className="reset-timer"
+            buttonAction={this.resetTimer}
+            buttonValue={'Reset'}
+          />
         </div>
       </div>
     );

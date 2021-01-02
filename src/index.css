@@ -1,3 +1,8 @@
+body
+{
+	background: linear-gradient(to right, #000046, #1cb5e0);
+}
+
 :root {
 	--main-font: “Roboto”, sans-serif;
 
@@ -16,10 +21,11 @@ body, div, p {
 	padding: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 700px) {
 	:root {
-		--timer-height: 60%;
-		--timer-width: 80%;
-		--button-text-size: 1.5em;
+		--timer-height: 100%;
+		--timer-width: 100%;
+		--button-text-size: 2em;
 }
+
 }
