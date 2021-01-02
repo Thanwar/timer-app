@@ -4,7 +4,7 @@
     margin: 0px 20px;
     border: var(--button-border);
     font-size: var(--button-text-size);
-    width: 100px;
+    width: 200px;
     margin: 10px;
   }
   
@@ -15,13 +15,13 @@
 
   @media screen and (max-width: 700px) {
     .button-container{
-      /* background-color: red; */
+      background: linear-gradient(to top, #84bee2, #26a0da);
+      color: black;
+      border-radius: 20px;
       width: 300px;
+      padding: 10px;
+      font-size: 40px;
 
     }
   }
 
-  .button-value
-  {
-    /* background-color: aqua; */
-  }

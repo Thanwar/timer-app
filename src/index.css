@@ -8,8 +8,8 @@ body
 
 	--timer-background-color: #FFFFFF;
 	--timer-border: 5px solid #000000;
-	--timer-height: 50%;
-	--timer-width: 70%;
+	--timer-height: 65%;
+	--timer-width: 65%;
 
 	--button-border: 3px solid #000000;
 	--button-text-size: 2em;
@@ -26,6 +26,7 @@ body, div, p {
 		--timer-height: 100%;
 		--timer-width: 100%;
 		--button-text-size: 2em;
+		--button-border: 1px solid #c0c0c0;
 }
 
 }
