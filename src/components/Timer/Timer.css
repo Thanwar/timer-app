@@ -3,4 +3,20 @@
 	border: var(--timer-border);
 	height: var(--timer-height);
 	width: var(--timer-width);
+	text-align: center;
+}
+
+.timer-button-container
+{
+	/* background-color: blue; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+.time-display
+{
+	background-color: aqua;
+	padding: 50px;
 }

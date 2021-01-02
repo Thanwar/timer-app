@@ -1,7 +1,9 @@
 :root {
+	--main-font: “Roboto”, sans-serif;
+
 	--timer-background-color: #FFFFFF;
-	--timer-border: 1px solid #000000;
-	--timer-height: 70%;
+	--timer-border: 5px solid #000000;
+	--timer-height: 50%;
 	--timer-width: 70%;
 
 	--button-border: 3px solid #000000;
@@ -16,8 +18,8 @@ body, div, p {
 
 @media screen and (max-width: 1024px) {
 	:root {
-		--timer-height: 100%;
-		--timer-width: 100%;
-		--button-text-size: 4em;
+		--timer-height: 60%;
+		--timer-width: 80%;
+		--button-text-size: 1.5em;
 }
 }
