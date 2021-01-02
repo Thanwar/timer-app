@@ -27,12 +27,17 @@
 
 @media screen and (max-width: 700px) {
 
-	.time-display
+.time-display
 {
 	/* background-color: red; */
 	padding: 70px 50px 80px 50px;
 	font-size: 90px;
 	margin: 0 auto;
+}
+
+.timer-container
+{
+	background: linear-gradient(to right, #000046, #1cb5e0);
 }
 
 }
